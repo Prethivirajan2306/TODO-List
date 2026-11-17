@@ -1,0 +1,341 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eaff, #f5eaff);
+    color: #292b45;
+    padding: 25px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #6650c8;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #77758c;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: white;
+    padding: 20px 10px;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0 4px 15px #0000000c;
+}
+
+.stat h3 {
+    font-size: 14px;
+    color: #77758c;
+}
+
+.stat h2 {
+    font-size: 29px;
+    color: #715bd1;
+    margin-top: 10px;
+}
+
+.progress-card,
+.form-card,
+.list-card,
+.challenge-card,
+.achievement-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px #0000000c;
+}
+
+h2 {
+    color: #51439b;
+    margin-bottom: 18px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 13px;
+    background: #e8e5f3;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #7761d9, #48bd91);
+    transition: width 0.4s;
+}
+
+#progressText {
+    color: #77758c;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#xpText {
+    color: #bc8b20;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd9ee;
+    border-radius: 8px;
+    margin: 9px 0 15px;
+    font-size: 14px;
+    background: #fbfaff;
+    color: #292b45;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8069dc;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #55516e;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.add-btn {
+    background: #725bd1;
+    color: white;
+    width: 100%;
+}
+
+.cancel-btn {
+    background: #77758c;
+    color: white;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#message {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #d14b58;
+}
+
+.filters {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin: 15px 0 20px;
+}
+
+.filter {
+    background: #eeeafa;
+    color: #5c4a9f;
+}
+
+.filter.active {
+    background: #725bd1;
+    color: white;
+}
+
+.task-item {
+    background: #f8f7fc;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 5px solid #8069dc;
+}
+
+.task-item.completed {
+    border-left-color: #28a66b;
+}
+
+.task-item.overdue {
+    border-left-color: #e04e59;
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-top h3 {
+    overflow-wrap: anywhere;
+    color: #39354f;
+    font-size: 17px;
+}
+
+.task-item.completed h3 {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-details {
+    font-size: 13px;
+    color: #77758c;
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.done-btn {
+    background: #239c67;
+    color: white;
+}
+
+.edit-btn {
+    background: #e4a63b;
+    color: white;
+}
+
+.delete-btn {
+    background: #df5260;
+    color: white;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.pending-status {
+    background: #fff0cf;
+    color: #a16b08;
+}
+
+.completed-status {
+    background: #d9f5e5;
+    color: #16844f;
+}
+
+.overdue-status {
+    background: #ffe0e2;
+    color: #c52f3d;
+}
+
+.priority {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #89869b;
+}
+
+.challenge-card {
+    border: 1px solid #f1c7a0;
+}
+
+.challenge-card h2 {
+    color: #d17c36;
+}
+
+#challengeList {
+    color: #a65d24;
+    line-height: 2;
+}
+
+.challenge-item {
+    padding: 10px;
+    background: #fff7ed;
+    border-radius: 8px;
+    margin-top: 9px;
+}
+
+.achievement-card {
+    text-align: center;
+    border: 1px solid #e7d58c;
+}
+
+.achievement-card h3 {
+    color: #bb901e;
+    margin-bottom: 8px;
+}
+
+.achievement-card p {
+    color: #77758c;
+}
+
+footer {
+    text-align: center;
+    color: #77758c;
+    padding: 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .progress-card,
+    .form-card,
+    .list-card,
+    .challenge-card,
+    .achievement-card {
+        padding: 18px;
+    }
+}
